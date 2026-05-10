@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor areynoso</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #0d0d1a;
+            color: white;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .tarjeta {
+            text-align: center;
+            border: 1px solid #2a2a5a;
+            border-radius: 12px;
+            padding: 50px 60px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            box-shadow: 0 0 40px rgba(0, 100, 255, 0.15);
+        }
+
+        .icono {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .titulo {
+            font-size: 1.1rem;
+            color: #a0c4ff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .servidor {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .dominio {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .btn-login {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 30px;
+            background: #0f3460;
+            color: #a0c4ff;
+            border: 1px solid #2a2a5a;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #1a4a80;
+            color: white;
+        }
+
+        .punto {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #00ff88;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: parpadeo 1.5s infinite;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <div class="icono">🖥️</div>
+        <div class="titulo">Estás en el servidor de</div>
+        <div class="servidor">areynoso</div>
+        <div class="dominio">
+            <span class="punto"></span>areynoso.tesvg.com.mx
+        </div>
+        <a href="login.html" class="btn-login">→ Iniciar sesión</a>
+    </div>
+</body>
+</html>

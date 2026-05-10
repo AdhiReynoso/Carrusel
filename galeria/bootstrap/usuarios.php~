@@ -1,0 +1,43 @@
+<?php
+
+// index.php
+//require_once 'db.php'; // Traemos el código del otro archivo
+
+require_once 'db-pgsql.php'; // Traemos el código del otro archivo
+
+
+//  Obtenemos los datos del formulario
+     $nombre = $_POST['nombre'];
+     $email  = $_POST['email'];
+     // Llamamos a la función y guardamos el objeto en $db
+      //$db = conectarPostgresql();
+      
+
+  try {
+        //  Preparamos la consulta con "marcadores" (:nombre, :email)
+        // Esto separa la estructura de la consulta de los datos reales
+        $sql = "INSERT INTO usuarios (nombre, email) VALUES (:nombre, :email)";
+        $query = $db->prepare($sql);
+
+        // Ejecutamos pasando los datos en un array
+        $resultado = $query->execute([
+            'nombre' => $nombre,
+            'email'  => $email
+        ]);
+
+        if ($resultado) {
+	   echo "Great! <a href='index.html'>Volver</a>";
+	   
+        }
+
+    } catch (PDOException $e) {
+        // Manejo de errores (ej. si el email ya existe y es único)
+        echo "Error al insertar: " . $e->getMessage();
+    }
+
+
+
+
+
+
+?>
