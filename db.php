@@ -2,7 +2,6 @@
 // db.php
 
 function conectarDB() {
-    // ✅ Conexión MariaDB (la que ya tienes)
     $dsn = "mysql:host=localhost;dbname=db_areynoso;charset=utf8mb4";
     $options = [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -17,7 +16,6 @@ function conectarDB() {
 }
 
 function conectarPG() {
-    // ✅ Conexión PostgreSQL (nueva)
     $dsn = "pgsql:host=localhost;dbname=db_areynoso";
     $options = [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
