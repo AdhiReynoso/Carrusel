@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-$pdo = conectarDB();
+$pdo = conectarPG();
 
 $stmt = $pdo->query("SELECT id, nombre, ruta FROM imagenes ORDER BY id ASC");
 $imagenes = $stmt->fetchAll(PDO::FETCH_ASSOC);
