@@ -8,7 +8,7 @@ require_once 'db.php'; // Traemos el código del otro archivo
      $pwd = $_POST['pwd'];
      
      // Llamamos a la función y guardamos el objeto en $db
-     $db = conectarDB();
+     $db = conectarPG();
       
   try {
 
